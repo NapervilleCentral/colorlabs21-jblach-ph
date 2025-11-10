@@ -20,66 +20,93 @@ public class TestPicture17
   {
       //opens picture using a dialog box
       /**/
-     // String fileName = FileChooser.pickAFile();
-     // Picture pictObj = new Picture(fileName);
-     // pictObj.explore();
+      // String fileName = FileChooser.pickAFile();
+      // Picture pictObj = new Picture(fileName);
+      // pictObj.explore();
 
-     //opens a pictue using a path
-     //Picture apic = new Picture("C:\Users\jblach\Desktop\AP CS\colorlabs21-jblach-ph\ColorLabs17\images");
-     //Know it, love it, live it
-     //relative path                     dir/folder/file
-     Picture apic = new Picture("images\\beach.jpg");
-     Picture ferris1 = new Picture("images/2000 ferris wheel2.jpg");
-     Picture moto = new Picture("images/blueMotorcycle.jpg");
-     Picture ferris3 = new Picture("images/2000 ferris wheel2.jpg");
-
-     apic.explore();
-     // displays the picture
-     ferris1.explore();
-     moto.explore();
+      //opens a pictue using a path
+      //Picture apic = new Picture("C:\Users\jblach\Desktop\AP CS\colorlabs21-jblach-ph\ColorLabs17\images");
+      //Know it, love it, live it
+      //relative path                     dir/folder/file
+      Picture apic = new Picture("images\\beach.jpg");
+      Picture ferris1 = new Picture("images/2000 ferris wheel2.jpg");
+      Picture moto = new Picture("images/blueMotorcycle.jpg");
+      Picture ferris3 = new Picture("images/2000 ferris wheel2.jpg");
+ 
+      apic.explore();
+      // displays the picture
+      ferris1.explore();
+      moto.explore();
      
-     // to change color of picture, get all of the pixels!
-     //makes an array of pixels
-     Pixel[] pixels;
-     //gets pixels from picture and assigns to pixels array
-     pixels = ferris1.getPixels();
+      // to change color of picture, get all of the pixels!
+      //makes an array of pixels
+      Pixel[] pixels;
+      //gets pixels from picture and assigns to pixels array
+      pixels = ferris1.getPixels();
     
-     //how many pixels or how large array
-    System.out.println("This is a large array"+pixels.length  );
+      //how many pixels or how large array
+      System.out.println("This is a large array"+pixels.length  );
 
 
-    /**/
-        //access each index, array note
-    System.out.println(pixels[17]);
-    //access each pixel pic.method.getPixel
-    Pixel spot = ferris1.getPixel(100,100);
-    Pixel spot50 = ferris1.getPixel(100, 100);
-    Color ltsteel = new Color(176, 196, 222);
-    System.out.println(pixels[17].getColor());
-    System.out.println(spot);
+      /**/
+      //access each index, array note
+      System.out.println(pixels[17]);
+      //access each pixel pic.method.getPixel
+      Pixel spot = ferris1.getPixel(100,100);
+      Pixel spot50 = ferris1.getPixel(100, 100);
+      Color ltsteel = new Color(176, 196, 222);
+      System.out.println(pixels[17].getColor());
+      System.out.println(spot);
     
-    Pixel spot17 = pixels[17]; 
-    spot17.setRed(185);
-    spot17.setBlue(125);
-    spot17.setGreen(160);
-    
-    spot.setColor(Color.yellow);
-    spot50.setColor(ltsteel);
-    ferris1.explore();
+      Pixel spot17 = pixels[17]; 
+      spot17.setRed(185);
+      spot17.setBlue(125);
+      spot17.setGreen(160);
+      
+      spot.setColor(Color.yellow);
+      spot50.setColor(ltsteel);
+      ferris1.explore();
 /*
     pixels[17].setColor(Color.blue);
     spot.setColor(new Color(252,252,252));
     pixels[500034].setColor(Color.blue);
 
     ferris1.explore();
-/*
-   // loop to access indexes of array or collection
-
+      
+    // loop to access indexes of array or collection
+    
     //for each loop spot  is a ?
-    for (Pixel spot : pixels)
-    System.out.println( spot );
+    int red; 
+    for (Pixel spot1 : pixels)
+    {
+        // System.out.println(spot1);
+        red = spot1.getRed();
+        red *= 0.25;
+        spot1.setRed(red);
+    }
+    ferris1.explore();
 
-
+    int blue; //reduce blue by random amount
+    for (Pixel spot1 : pixels)
+    {
+        // System.out.println(spot1);
+        blue = spot1.getBlue();
+        blue = (int) (Math.random() * blue);
+        spot1.setBlue(blue);
+    }
+    ferris1.explore();
+    /**/
+    int green; //reduce green by random amount
+    int count = 0;
+    for (Pixel spot1 : pixels)
+    {
+        if (count % 20 == 0)
+        {
+            spot1.setColor(Color.yellow);
+            count++;
+        }
+    }
+    ferris1.explore();
    
  /**/
 
