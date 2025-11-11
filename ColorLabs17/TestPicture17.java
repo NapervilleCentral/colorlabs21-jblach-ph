@@ -103,10 +103,12 @@ public class TestPicture17
         if (count % 20 == 0)
         {
             spot1.setColor(Color.yellow);
-            count++;
         }
+        count++;
     }
     ferris1.explore();
+    ferris1.write("images/SFTry1.jpg"); // saves the picture
+    
    
  /**/
 
