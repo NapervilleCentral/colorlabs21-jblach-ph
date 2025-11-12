@@ -17,7 +17,8 @@ public class colorLabs
         Picture moto = new Picture("images/blueMotorcycle.jpg");
         
         // change color by a fraction
-        int red; 
+        int red;
+        
         Pixel[] pixelF;
         pixelF = ferris.getPixels();
         ferris.explore();
@@ -28,7 +29,7 @@ public class colorLabs
             spot1.setRed(red);
         }
         ferris.explore();
-        
+        /**/
         // negative photo
         int blue;
         int green;
@@ -49,7 +50,7 @@ public class colorLabs
         beach.explore();
         
         // grayscale (take average...? maybe take average of all coordinates and make each the same or smth)
-        /*
+        
         Pixel[] pixelMa;
         pixelMa = mark.getPixels();
         for (Pixel spot3 : pixelMa)
@@ -85,6 +86,24 @@ public class colorLabs
         // change color (all 3 by a number, not a fraction)
         // use ferris
         
+        Pixel[] pixelF2;
+        pixelF2 = ferris.getPixels();
+        for (Pixel spot5 : pixelF2)
+        {
+            red = spot5.getRed();
+            blue = spot5.getBlue();
+            green = spot5.getGreen();
+            red = (int) (Math.random() * red);
+            blue = (int) (Math.random() * blue);
+            green = (int) (Math.random() * green);
+            
+            spot5.setRed(red);
+            spot5.setBlue(blue);
+            spot5.setGreen(green);
+        }
+        ferris.explore();
+        /**/
+        
         // colorify/blueify (mark)
         Pixel[] pixelMa2;
         pixelMa2 = mark.getPixels();
@@ -105,6 +124,5 @@ public class colorLabs
             spot6.setGreen(green);
         }
         mark.explore();
-        
     }
 }
