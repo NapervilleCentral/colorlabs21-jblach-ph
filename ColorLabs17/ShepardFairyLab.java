@@ -277,6 +277,8 @@ public class ShepardFairyLab
                 spot6.setColor(bnwt);
             }
         }
-        j6.explore();
+        // j6.explore();
+        
+        j3.write("images/justin selfie final.jpg");
     }//main       
 }//class
