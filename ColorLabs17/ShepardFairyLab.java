@@ -69,7 +69,8 @@ public class ShepardFairyLab
                 spot1.setColor(offwt);
             }
         }
-        // j1.explore();
+        j1.explore();
+        j1.write("images/justin selfie final 3.jpg");
         
         // gorge (method 2) narrow white down to get more definition on face
         Pixel[] pixelJ2;
@@ -112,8 +113,8 @@ public class ShepardFairyLab
                 spot2.setColor(offwt);
             }
         }
-        System.out.println(s + " " + b);
-        // j2.explore();
+        j2.explore();
+        j2.write("images/justin selfie final 2.jpg");
         /**
          * custom color palette
          */
@@ -158,6 +159,7 @@ public class ShepardFairyLab
             }
         }
         j3.explore();
+        j3.write("images/justin selfie final.jpg");
         
         Color inkblu = new Color(15, 42, 63);
         Color chcgry = new Color (54, 61, 68);
@@ -197,8 +199,8 @@ public class ShepardFairyLab
                 spot4.setColor(palegr);
             }
         }
-        // j4.explore();
-        
+        j4.explore();
+        j4.write("images/justin selfie final 4.jpg");
         Color dpslt = new Color(46, 58, 68);
         Color dkbrk = new Color(115, 50, 47);
         Color crmsn = new Color(140, 63, 60);
@@ -237,8 +239,8 @@ public class ShepardFairyLab
                 spot5.setColor(sftcl);
             }
         }
-        // j5.explore();
-        
+        j5.explore();
+        j5.write("images/justin selfie final 5.jpg");
         Color slbrn = new Color(62, 40, 31);
         Color brtumb = new Color(90, 59, 46);
         Color olvgr = new Color(107, 122, 66);
@@ -277,8 +279,8 @@ public class ShepardFairyLab
                 spot6.setColor(bnwt);
             }
         }
-        // j6.explore();
+        j6.explore();
+        j6.write("images/justin selfie final 6.jpg");
         
-        j3.write("images/justin selfie final.jpg");
     }//main       
 }//class
